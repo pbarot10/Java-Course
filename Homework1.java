@@ -1,3 +1,4 @@
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 import java.io.*;
 
@@ -18,7 +19,7 @@ public class Homework1 {
         try {
             Writer writer = new BufferedWriter(
                     new OutputStreamWriter(
-                            new FileOutputStream("output.txt"), "ascii"));
+                            new FileOutputStream("output.txt"), StandardCharsets.US_ASCII));
             writer.write(new Integer(number).toString());
             writer.close();
         } catch (IOException ex) {
